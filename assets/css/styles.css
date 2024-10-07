@@ -1,0 +1,194 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Noto+Serif+Oriya:wght@400..700&display=swap');
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body::before {
+	z-index: -1;
+	content: '';
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../img/plants.jpg");
+	opacity: 0.4;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.mask {
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+}
+
+body > header {
+	padding: 1rem 0;
+/*	background-color: rgba(0,0,0,0.4);
+	box-shadow: 0 4px 10px 5px rgba(0,0,0,0.4);*/
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.4rem 4rem;
+	background: transparent;
+}
+
+header nav a {
+	color: #784f12;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding: 0.8rem;
+	border-radius: 12px;
+	transition: background-color 0.25s;
+}
+header nav a:hover {
+	background-color: #784f12;
+	color: #FFF;
+	box-shadow: 1px 2px 2px 2px #000;
+}
+
+header nav .left {
+	display: flex;
+	gap: 2rem;
+}
+
+.logo {
+	height: 80px;
+	width: 80px;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-position: contain;
+	background-size: contain;
+	transition: filter 1s;
+}
+.logo:hover {
+	filter: drop-shadow(2px 2px 14px #FFF);
+	cursor: pointer;
+}
+
+
+
+main .hero {
+	margin-top: 8rem;
+	padding: 0 4%;
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+	margin-bottom: 4rem;
+}
+
+main .hero .photo {
+	height: 530px;
+	width: 430px;
+	position: relative;
+}
+
+main .hero .photo::before {
+	content: '';
+	bottom: -20px;
+	right: -20px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: solid 6px #784f12;
+	border-radius: 10px;
+}
+
+main .hero .photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+main .hero .presentation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+main .hero .presentation h2, main .hero .presentation p {
+	color: #784f12;
+}
+main .hero .presentation h2 {
+	font-size: 48px;
+}
+main .hero .presentation p {
+	margin-top: 1rem;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+section#description {
+	background-color: #784f12;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 4%;
+}
+#description h1 {
+	margin-top: 6rem;
+	font-size: 4.8rem;
+	font-weight: 500;
+	max-width: 520px;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: "Crimson Pro", serif;
+	margin-bottom: 4rem;
+}
+
+#description p {
+	max-width: 600px;
+	font-family: "Crimson Pro", serif;
+	font-weight: 300;
+	font-size: 2.2rem;
+	color: #FFFFFF;
+	margin-bottom: 1rem;
+	text-align: justify;
+}
+#description p:nth-of-type(3) {
+	margin-bottom: 6rem;
+}
+
+
+@media screen and (max-width: 580px) {
+
+	main .hero {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	main .hero {
+		margin-top: 8rem;
+		padding: 0 4%;
+		margin-bottom: 4rem;
+	}
+
+	main .hero .photo {
+		height: auto;
+		width: auto;
+		min-width: 240px;
+	}
+
+	main .hero .photo::before {
+		content: '';
+		bottom: 0px;
+		right: 0px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: solid 6px #784f12;
+		border-radius: 10px;
+	}
+
+}
