@@ -147,21 +147,26 @@ main .hero .photo {
 }
 
 main .hero .photo::before {
+	z-index: 1;
 	content: '';
 	bottom: -20px;
 	right: -20px;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border: solid 6px #946e35;
-	border-radius: 10px;
+	background: rgba( 255, 255, 255, 0.3 );
+	box-shadow: 0 8px 62px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 6.5px );
+	-webkit-backdrop-filter: blur( 6.5px );
 }
 
 main .hero .photo img {
+	position: absolute;
+	z-index: 2;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 10px;
+	box-shadow: 10px 10px 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 main .hero .presentation {
@@ -212,6 +217,52 @@ section#description {
 }
 #description p:nth-of-type(3) {
 
+}
+
+
+
+section.services {
+	display: flex; 
+	padding: 4rem 8rem;
+	gap: 2rem;
+	justify-content: space-between;
+}
+
+.services .service__card {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	max-width: 300px;
+	background: rgba( 255, 255, 255, 0.3 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 6.5px );
+	-webkit-backdrop-filter: blur( 6.5px );
+	border-radius: 10px;
+}
+
+.service__card .card__name {
+	min-height: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.card__name .card__name__name {
+	margin-top: 1rem;
+	font-size: 20px;
+}
+
+.service__card .card__description {
+	padding: 0 2rem;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.service__card .card__description p {
+	line-height: 1;
+	letter-spacing: 2px;
 }
 
 
@@ -350,6 +401,14 @@ footer .details ul li p a {
 		display: none;
 	}
 
+
+	section.services {
+		display: flex; 
+		padding: 4rem 8rem;
+		gap: 2rem;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
 
 
 	footer {
