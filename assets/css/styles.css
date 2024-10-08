@@ -31,8 +31,6 @@ body::before {
 
 body > header {
 	padding: 1rem 0;
-/*	background-color: rgba(0,0,0,0.4);
-	box-shadow: 0 4px 10px 5px rgba(0,0,0,0.4);*/
 }
 
 header nav {
@@ -107,10 +105,12 @@ div.menu__mobile {
 	position: absolute;
 	opacity: 0;
 	left: 0;
-	top: 100px;
+	top: 0;
+	transform: translateY(80px);
 	height: 0;
 	right: 0;
 	transition: all 0.8s ease-in-out;
+	overflow: hidden;
 }
 .menu__mobile__list.active{
 	pointer-events: all;
@@ -125,6 +125,10 @@ div.menu__mobile {
 	flex-direction: column;
 	justify-content: space-around;
 }
+
+
+
+
 
 
 main .hero {
