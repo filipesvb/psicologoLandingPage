@@ -149,7 +149,7 @@
 	}
 
 	.service__card .card__description {
-		padding: 0 1.8vw;
+		padding: 0 4.3vw;
 		gap: 3vh;
 	}
 	.service__card .card__description p {
@@ -161,7 +161,7 @@
 		min-height: 0;
 		flex-direction: column;
 		justify-content: space-around;
-		padding: 4vh 0;
+		padding: 0 0 4vh 0;
 	}
 
 	footer .logo__container {
