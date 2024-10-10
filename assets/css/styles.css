@@ -33,7 +33,7 @@ body > header {
 	padding: 2%;
 }
 
-header nav {
+header > nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -105,7 +105,7 @@ div.menu__mobile {
 	opacity: 0;
 	left: 0;
 	top: 0;
-	transform: translateY(80px);
+	transform: translateY(8.94vh);
 	height: 0;
 	right: 0;
 	transition: all 0.5s ease-in-out;
@@ -114,7 +114,7 @@ div.menu__mobile {
 .menu__mobile__list.active{
 	pointer-events: all;
 	z-index: 2;
-	height: 140px;
+	height: 20vh;
 	opacity: 1;
 }
 
@@ -125,6 +125,14 @@ div.menu__mobile {
 	justify-content: space-around;
 }
 
+/*Attempt to fix the dropdown delay bug on mobile*/
+.menu__mobile__list ul li {
+	height: 0;
+	overflow: hidden;
+}
+.menu__mobile__list.active ul li {
+	height: auto;
+}
 
 
 
@@ -141,7 +149,8 @@ main .hero {
 
 main .hero .photo {
 	height: 75vh;
-	width: 25vw;
+	width: 40vw;
+	max-width: 400px;
 	position: relative;
 }
 
@@ -192,7 +201,6 @@ section#description {
 	flex-direction: column;
 	align-items: center;
 	padding: 0 6%;
-	padding-bottom: 10rem;
 }
 #description h1 {
 	margin-top: 12vh;
@@ -216,7 +224,7 @@ section#description {
 	text-align: left;
 }
 #description p:nth-of-type(3) {
-	margin-bottom: 12vh;
+	margin-bottom: 16vh;
 }
 
 
@@ -345,119 +353,4 @@ footer .copyright {
 	font-family: "Crimson Pro", serif;
 }
 
-@media screen and (max-width: 580px) {
 
-	header.pageHeader{
-		z-index: 3;
-		position: sticky;
-		top: 0;
-		transition: all 0.5s ease;
-	}
-
-	header.pageHeader.scrolled {
-		background-color: #FFF;
-		/*
-		background: rgba( 255, 255, 255, 0.3 );
-		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-		backdrop-filter: blur( 6.5px );
-		-webkit-backdrop-filter: blur( 6.5px );
-		border-radius: 10px;
-		*/
-	}
-
-
-
-	header .menu__mobile nav ul {
-		display: flex;
-		height: 100%;
-		flex-direction: column;
-		align-items: stretch;
-	}
-	header .menu__mobile nav ul li {
-		flex: 1;
-	}
-	header .menu__mobile nav a {
-		display: flex;
-		align-items: center;
-		height: 100%;
-		padding: 1rem 0.8rem;
-		color: #946e35;
-		font-weight: 600;
-		font-size: 14px;
-		letter-spacing: 2px;
-		vertical-align: 1;
-		transition: background-color 0.25s;
-	}
-	header .menu__mobile nav a:hover {
-		background-color: #946e35;
-		color: #FFF;
-	}
-
-	nav.menu__desktop {
-		display: none;
-	}
-
-	div.menu__mobile {
-		display: block;
-	}
-
-	main .hero {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	main .hero {
-		margin-top: 8rem;
-		padding: 0 4%;
-		padding-left: 15%;
-		margin-bottom: 4rem;
-	}
-
-	main .hero .photo {
-		height: 550px;
-		width: auto;
-		min-width: 240px;
-	}
-
-	main .hero .photo img {
-		border-radius: 0;
-	}
-
-	main .hero .photo::before {
-		content: '';
-		width: 0;
-		height: 0;
-		background-color: transparent;
-		border: none;
-		display: none;
-	}
-
-
-	section.services {
-		gap: 2vw;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	section.services .service__card {
-		min-width: 60vw;
-	}
-
-
-	footer .footer__top {
-		min-height: 0;
-		flex-direction: column;
-		justify-content: space-around;
-		padding: 4rem 0;
-	}
-
-	footer .details {
-		padding: 0;
-		flex: 1;
-	}
-
-	footer .logo__container {
-		flex: 1;
-	}
-
-}
