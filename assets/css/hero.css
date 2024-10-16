@@ -11,7 +11,7 @@ main .hero {
 }
 
 main .hero .hero__content {
-	margin-top: 5vh;
+	margin-top: 2vh;
 	position: absolute;
 	left: 0;
 	width: calc(52%);
@@ -29,8 +29,8 @@ main .hero .hero__content__logo {
 }
 
 .hero__content__logo .logo__container {
-	width: 18vw;
-	height: 18vw;
+	width: clamp(18vw, 1vh, 30vh );
+	height: 34vh;
 	position: absolute;
 	left: 3vw;
 	bottom: 0vw;
@@ -54,9 +54,10 @@ main .hero .hero__content__logo {
 	height: 100%;
 	border-radius: 50%;
 	position: absolute;
-	background: rgba( 170, 170, 170, 0.9 );
+	background: radial-gradient(rgba(170,170,170,0.9) 40%, rgba(170,170,170,0));
 	backdrop-filter: blur( 6.5px );
 	-webkit-backdrop-filter: blur( 6.5px );
+	/*box-shadow: 0 0 14px 14px rgba(170, 170, 170, 0.9);*/
 }
 .hero__content__logo h2 {
 	position: absolute;
@@ -70,6 +71,7 @@ main .hero .hero__content__logo {
 	font-style: normal;
 	line-height: 1.6;
 	pointer-events: none;
+	user-select: none;
 }
 
 
