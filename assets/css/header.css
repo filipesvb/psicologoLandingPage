@@ -43,20 +43,7 @@ header nav .left {
 	gap: 2vw;
 }
 
-<<<<<<< HEAD
-=======
-/*.logo {
-	height: 18vh;
-	width: 18vw;
-	
-	transition: filter 1s;
-}
-.logo:hover {
-	filter: drop-shadow(2px 2px 14px #FFF);
-	cursor: pointer;
-}*/
 
->>>>>>> 323ffb805fceb74e1d79a21cd73886655eec2d08
 div.menu__mobile {
 	display: none;
 	position: relative;
