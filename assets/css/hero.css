@@ -11,14 +11,17 @@ main .hero {
 }
 
 main .hero .hero__content {
-	margin-top: 2vh;
+	/*margin-top: 2vh;*/
+	display: flex;
+	flex-direction: column;
 	position: absolute;
 	left: 0;
 	width: calc(52%);
 	height: 100%;
-/*	background: rgba( 255, 255, 255, 0.3 );
-	backdrop-filter: blur( 6.5px );
-	-webkit-backdrop-filter: blur( 6.5px );*/
+	background: rgba( 255, 255, 255, 0.3 );
+	box-shadow: 0 8px 32px 0 rgba( 135, 135, 135, 0.37 );
+	backdrop-filter: blur( 12px );
+	-webkit-backdrop-filter: blur( 12px );
 }
 
 main .hero .hero__content__logo {
@@ -74,6 +77,53 @@ main .hero .hero__content__logo {
 	user-select: none;
 }
 
+main .hero__content .hero__content__text {
+}
+.hero__content__text h2 {
+	font-size: 5vw;
+	font-family: 'Crimson Pro', serif;
+	color: #282727;
+}
+.hero__content__text p {
+	font-size: 1.8vw;
+	font-family: 'Crimson Pro', serif;
+	line-height: 1.2;
+	word-break: break-word;
+	margin-bottom: 3vh;
+	padding-right: 4vw;
+}
+
+.hero__content__contact {
+	padding: 2vh 0;
+	padding-bottom: 0;
+}
+
+.hero__content__contact__button {
+	display: flex;
+	align-items: center;
+	gap: 1vw;
+	background-color: #946e35;
+	color: #fff;
+	font-size: 2vw;
+	border-radius: 10vw;
+	border: none;
+	padding: 1.5vh 1.5vw;
+}
+
+.hero__content__contact__button svg {
+	width: 2vw;
+	height: 4vh;
+}
+
+.hero__content__phrase {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+.hero__content__phrase p {
+	font-size: 1.4vw;
+	font-family: "Crimson Pro", serif;
+}
 
 main .hero__photo {
 	background-image: url('../img/couch_extend.png');

@@ -1,7 +1,7 @@
 
 body > header {
 	z-index: 4;
-	padding: 2vh 3vw;
+	padding: 2vh 0;
 	background: linear-gradient(to bottom, #ECECEC 90%, #b8b8b800);
 	position: sticky;
 	top: 0;
